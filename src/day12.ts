@@ -1,5 +1,5 @@
 import * as fs from "fs/promises";
-import * as util from "util";
+import { time } from "./timer";
 
 async function part1(input: string): Promise<number> {
   const lines = input.split("\n").filter((l) => l != "");
@@ -81,16 +81,6 @@ function matches(row: string, prefix: string): boolean {
     }
   }
   return allMatch;
-}
-
-async function time(
-  part: (input: string) => Promise<number>,
-  input: string
-): Promise<string> {
-  const start = performance.now();
-  const result = await part(input);
-  const time = performance.now() - start;
-  return util.format("result: %d, in %d milliseconds", result, time);
 }
 
 async function main(file: string) {
