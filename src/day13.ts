@@ -1,7 +1,7 @@
 import * as fs from "fs/promises";
 import { time } from "./timer";
 
-async function part1(input: string): Promise<number> {
+function part1(input: string): number {
   const lines = input.split("\n");
   const paths = split(lines, (l) => l === "");
 
@@ -38,7 +38,7 @@ async function part1(input: string): Promise<number> {
   return summaries.reduce((a, b) => a + b);
 }
 
-async function part2(input: string): Promise<number> {
+function part2(input: string): number {
   const lines = input.split("\n");
   const paths = split(lines, (l) => l === "");
 

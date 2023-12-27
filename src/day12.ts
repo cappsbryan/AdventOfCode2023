@@ -1,7 +1,7 @@
 import * as fs from "fs/promises";
 import { time } from "./timer";
 
-async function part1(input: string): Promise<number> {
+function part1(input: string): number {
   const lines = input.split("\n").filter((l) => l != "");
   let sum = 0;
   for (const line of lines) {
@@ -14,7 +14,7 @@ async function part1(input: string): Promise<number> {
   return sum;
 }
 
-async function part2(input: string): Promise<number> {
+function part2(input: string): number {
   const lines = input.split("\n").filter((l) => l != "");
   let sum = 0;
   for (const line of lines) {
