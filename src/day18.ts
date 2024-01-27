@@ -40,7 +40,7 @@ class Dig {
 	maxRow = -Infinity;
 	maxCol = -Infinity;
 
-	constructor(instructions: [Direction, number][]) {
+	constructor(instructions: (readonly [Direction, number])[]) {
 		let current = { row: 0, col: 0 };
 		for (const [direction, distance] of instructions) {
 			this.trenchDistance += distance;
